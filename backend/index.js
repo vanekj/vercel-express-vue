@@ -19,7 +19,6 @@ app.use(cookieParser());
 app.use(express.static(publicPath));
 
 app.use('/api/pokemons', pokemonsRouter);
-app.get('*', (req, res) => res.sendFile(rootHtml));
 
 // error handler
 app.use(function(err, req, res, next) {
