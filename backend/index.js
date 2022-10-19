@@ -6,6 +6,8 @@ const app = express();
 
 const pokemonsRouter = require('./routes/pokemons');
 
+app.set('trust proxy', true);
+
 app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
